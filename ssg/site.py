@@ -33,7 +33,7 @@ class Site:
         
         else:
             self.error(
-                "No parser for the `{}` extension, file skipped!".format(path.suffix)
+                "No parser for the {} extension, file skipped!".format(path.suffix)
             )
 
     @staticmethod
