@@ -37,8 +37,8 @@ class Site:
             )
 
     @staticmethod
-    def error(message, end="\n"):
-        sys.stderr.write("\x1b[1;31m" + message.strip() + "\x1b[0m" + end)
+    def error(message):
+        sys.stderr.write("\x1b[1;31m{}\n".format(message))
 
             
 
