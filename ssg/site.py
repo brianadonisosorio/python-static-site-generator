@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import sys
 
 class Site:
     def __init__(self, source, dest, parsers=None):
@@ -35,7 +36,10 @@ class Site:
                 "No parser for the `{}` extension, file skipped!".format(path.suffix)
             )
 
-               
+    @staticmethod
+    def error(message, end="\n"):
+        sys.stderr.write("\x1b[1;31m" + message.strip() + "\x1b[0m" + end)
+
             
 
 
